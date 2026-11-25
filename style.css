@@ -1,0 +1,1988 @@
+
+/* Basic Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f7f4;
+    color: #252525;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background-color: white;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #252525;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #c47751;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #444;
+    font-size: 15px;
+}
+
+.navbar nav a:hover {
+    color: #c47751;
+}
+
+/* Welcome Section */
+.hero {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    padding: 65px 10%;
+    background: linear-gradient(120deg, #eee5d9, #e6d4c4);
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.tagline {
+    color: #a45f3d;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    color: #555;
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 28px;
+}
+
+.explore-button {
+    display: inline-block;
+    background-color: #a96543;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.explore-button:hover {
+    background-color: #854b30;
+}
+
+/* Clubs Section */
+.clubs-section {
+    padding: 75px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+    color: #777;
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 550px;
+    margin: 0 auto 40px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 13px 18px;
+}
+
+.search-container span {
+    font-size: 25px;
+    color: #888;
+}
+
+.search-container input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+/* Club Cards */
+.club-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.club-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.club-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.club-image {
+    height: 155px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+    background: #eee6dc;
+}
+
+.club-card:nth-child(2) .club-image {
+    background: #e2e8ed;
+}
+
+.club-card:nth-child(3) .club-image {
+    background: #f0e3e6;
+}
+
+.club-card:nth-child(4) .club-image {
+    background: #e7e9dc;
+}
+
+.club-info {
+    padding: 22px;
+}
+
+.club-info h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.club-info p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 45px;
+}
+
+.club-fee {
+    margin: 18px 0;
+    font-weight: bold;
+    color: #a45f3d;
+}
+
+.club-link {
+    display: inline-block;
+    color: white;
+    background: #292929;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.club-link:hover {
+    background: #a45f3d;
+}
+
+.no-results {
+    text-align: center;
+    color: #777;
+    margin: 30px 0;
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+    padding: 65px 10%;
+    background: #eee7de;
+}
+
+.about-section h2 {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.about-section p {
+    max-width: 650px;
+    margin: auto;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 22px;
+    background: #252525;
+    color: white;
+    font-size: 13px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 800px) {
+    .club-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 550px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .navbar nav {
+        gap: 17px;
+    }
+
+    .club-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 55px 7%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .clubs-section {
+        padding: 55px 7%;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+}
+
+
+/* ===== NAVY BLUE THEME ===== */
+
+/* Logo accent */
+.logo span {
+    color: #193B63;
+}
+
+/* Navigation hover */
+.navbar nav a:hover {
+    color: #193B63;
+}
+
+/* Section labels */
+.tagline {
+    color: #193B63;
+}
+
+/* Hero background */
+.hero {
+    background: linear-gradient(120deg, #EAF0F7, #DCE6F1);
+}
+
+/* Explore button */
+.explore-button {
+    background-color: #193B63;
+}
+
+.explore-button:hover {
+    background-color: #102945;
+}
+
+/* Club fees */
+.club-fee {
+    color: #193B63;
+}
+
+/* Club button hover */
+.club-link:hover {
+    background-color: #193B63;
+}
+
+/* About section */
+.about-section {
+    background: #E8EEF5;
+}
+
+/* Category Filters */
+
+.category-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px auto 40px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 1px solid #193B63;
+    border-radius: 25px;
+    background: white;
+    color: #193B63;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #193B63;
+    color: white;
+}
+/* ===== IMPROVED CLUB CARDS ===== */
+
+#clubContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.club-card {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #dce6f1;
+    box-shadow: 0 4px 12px rgba(16, 41, 69, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.club-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(16, 41, 69, 0.15);
+}
+
+.club-image {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf0f7;
+    font-size: 55px;
+}
+
+.club-info {
+    padding: 20px;
+}
+
+.club-info h3 {
+    color: #102945;
+    margin-bottom: 10px;
+}
+
+.club-info p {
+    color: #526477;
+    line-height: 1.6;
+}
+
+.club-fee {
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+
+@media (max-width: 600px) {
+    #clubContainer {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .club-info {
+        padding: 16px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+/* ===== THEME SWITCH BUTTON ===== */
+
+.theme-toggle {
+    background: #193B63;
+    color: white;
+    border: 1px solid #52769C;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.theme-toggle:hover {
+    opacity: 0.8;
+}
+
+/* ===== NIGHT MODE ===== */
+
+body.dark-mode {
+    background: #080D18;
+    color: #E8EEF5;
+}
+
+body.dark-mode .navbar {
+    background: #080D18;
+    color: white;
+}
+
+body.dark-mode .navbar nav a {
+    color: #E8EEF5;
+}
+
+body.dark-mode .hero {
+    background: linear-gradient(120deg, #101B30, #172B49);
+    color: white;
+}
+
+body.dark-mode .hero h1,
+body.dark-mode .hero p,
+body.dark-mode .tagline {
+    color: #E8EEF5;
+}
+
+body.dark-mode .explore-button {
+    background: #193B63;
+    color: white;
+}
+
+body.dark-mode .club-card {
+    background: #111B2B;
+    border: 1px solid #263B59;
+}
+
+body.dark-mode .club-image {
+    background: #172B49;
+}
+
+body.dark-mode .club-info h3 {
+    color: #E8EEF5;
+}
+
+body.dark-mode .club-info p {
+    color: #B9C7D8;
+}
+
+body.dark-mode .club-fee {
+    color: #8CB8E8;
+}
+
+body.dark-mode .club-link {
+    background: #193B63;
+    color: white;
+}
+
+body.dark-mode .about-section {
+    background: #111B2B;
+    color: #E8EEF5;
+}
+
+body.dark-mode .about-section h2,
+body.dark-mode .about-section p {
+    color: #E8EEF5;
+}
+
+body.dark-mode footer {
+    background: #050912;
+    color: #E8EEF5;
+}
+
+body.dark-mode input {
+    background: #111B2B;
+    color: white;
+    border: 1px solid #52769C;
+}
+
+body.dark-mode .filter-btn {
+    background: #111B2B;
+    color: #E8EEF5;
+    border-color: #52769C;
+}
+
+body.dark-mode .filter-btn.active {
+    background: #193B63;
+    color: white;
+}
+
+/* ===== BRIGHT MODE ===== */
+
+body.light-mode {
+    background: #F4F7FB;
+    color: #102945;
+}
+
+body.light-mode .navbar {
+    background: #FFFFFF;
+    color: #102945;
+}
+
+body.light-mode .navbar nav a {
+    color: #102945;
+}
+
+body.light-mode .hero {
+    background: linear-gradient(120deg, #EAF0F7, #DCE6F1);
+    color: #102945;
+}
+
+body.light-mode .club-card {
+    background: #FFFFFF;
+    border: 1px solid #DCE6F1;
+}
+
+body.light-mode .club-image {
+    background: #EAF0F7;
+}
+
+body.light-mode .club-info h3 {
+    color: #102945;
+}
+
+body.light-mode .club-info p {
+    color: #526477;
+}
+
+body.light-mode .about-section {
+    background: #E8EEF5;
+    color: #102945;
+}
+
+body.light-mode footer {
+    background: #102945;
+    color: white;
+}
+
+body.light-mode input {
+    background: white;
+    color: #102945;
+    border: 1px solid #AABBD0;
+}
+
+body.light-mode .filter-btn {
+    background: white;
+    color: #102945;
+    border-color: #AABBD0;
+}
+
+body.light-mode .filter-btn.active {
+    background: #193B63;
+    color: white;
+}
+
+/* Smooth theme transition */
+
+body,
+.navbar,
+.hero,
+.club-card,
+.club-image,
+.about-section,
+footer,
+input,
+.filter-btn {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* ===== MOBILE RESPONSIVE DESIGN ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Header layout */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Mobile menu button */
+
+.menu-toggle {
+    display: none;
+    background: #193B63;
+    color: white;
+    border: none;
+    padding: 9px 13px;
+    border-radius: 7px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Tablet and phone layout */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: relative;
+        padding: 12px 16px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .navbar nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        order: 3;
+        gap: 0;
+    }
+
+    .navbar nav.show-menu {
+        display: flex;
+    }
+
+    .navbar nav a {
+        padding: 12px;
+        border-top: 1px solid #52769C;
+    }
+
+    .theme-toggle {
+        order: 4;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .hero {
+        padding: 45px 18px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(26px, 7vw, 36px);
+    }
+
+    .search-container {
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+
+    .category-filters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    #clubContainer {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        padding: 0 12px;
+    }
+
+    .about-section {
+        padding: 35px 18px;
+    }
+
+    footer {
+        padding: 20px 12px;
+        text-align: center;
+    }
+}
+
+/* Small phones */
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    #clubContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .club-card {
+        width: 100%;
+    }
+
+    .filter-btn {
+        font-size: 12px;
+        padding: 8px 11px;
+    }
+}
+
+/* ===== EDUCLUB PROFESSIONAL DESIGN ===== */
+
+/* Overall typography and layout */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #528BCA;
+}
+
+/* Professional navigation */
+
+.navbar {
+    min-height: 76px;
+    padding: 12px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    border-bottom: 1px solid rgba(120, 150, 190, 0.18);
+    position: relative;
+    z-index: 10;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.navbar nav a:hover {
+    color: #528BCA;
+}
+
+.theme-toggle {
+    padding: 10px 17px;
+    border-radius: 9px;
+    font-weight: 600;
+    font-size: 13px;
+    border: 1px solid #52769C;
+    cursor: pointer;
+}
+
+/* Professional buttons */
+
+.explore-button,
+.club-link {
+    border-radius: 9px;
+    padding: 12px 21px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.explore-button:hover,
+.club-link:hover {
+    transform: translateY(-2px);
+}
+
+/* Section spacing */
+
+#clubs,
+#about {
+    padding: 65px 6%;
+}
+
+#clubContainer {
+    gap: 26px;
+}
+
+/* Professional club cards */
+
+.club-card {
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.club-image {
+    height: 175px;
+}
+
+.club-info {
+    padding: 22px;
+}
+
+.club-info h3 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.club-info p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 5%;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    #clubs,
+    #about {
+        padding: 45px 5%;
+    }
+}
+
+/* ===== PROFESSIONAL EDUCLUB HOMEPAGE ===== */
+
+.hero {
+    min-height: 430px;
+    padding: 85px 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .tagline {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 5vw, 58px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.8px;
+    max-width: 850px;
+    margin: 0 auto 20px;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0 auto 30px;
+    opacity: 0.85;
+}
+
+.explore-button {
+    display: inline-block;
+    padding: 14px 27px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 18px rgba(25, 59, 99, 0.2);
+}
+
+.explore-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 24px rgba(25, 59, 99, 0.3);
+}
+
+/* Night mode hero */
+
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #080D18, #102945, #101B30);
+    color: #FFFFFF;
+}
+
+body.dark-mode .hero .tagline {
+    color: #8CB8E8;
+}
+
+body.dark-mode .hero h1 {
+    color: #FFFFFF;
+}
+
+body.dark-mode .hero p {
+    color: #C3D0E0;
+}
+
+/* Bright mode hero */
+
+body.light-mode .hero {
+    background: linear-gradient(135deg, #FFFFFF, #EAF0F7, #DCE6F1);
+    color: #102945;
+}
+
+body.light-mode .hero .tagline {
+    color: #52769C;
+}
+
+body.light-mode .hero h1 {
+    color: #102945;
+}
+
+body.light-mode .hero p {
+    color: #526477;
+}
+
+/* Smaller screens */
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 370px;
+        padding: 65px 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+}
+
+/* ===== HERO SECTION ENHANCEMENT ===== */
+
+.hero {
+    min-height: 510px;
+    padding: 85px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 9px 17px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    margin-bottom: 22px;
+}
+
+.hero .tagline {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.hero-description {
+    max-width: 620px;
+    margin: 0 auto 30px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.secondary-button {
+    display: inline-block;
+    padding: 13px 23px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #52769C;
+    transition: 0.25s ease;
+}
+
+.secondary-button:hover {
+    transform: translateY(-3px);
+}
+
+.hero-note {
+    margin-top: 30px;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    opacity: 0.7;
+}
+
+/* Night Mode */
+
+body.dark-mode .hero {
+    background:
+        radial-gradient(circle at 50% 0%, #193B63 0%, transparent 55%),
+        linear-gradient(135deg, #080D18, #101B30);
+}
+
+body.dark-mode .hero-badge {
+    background: #172B49;
+    color: #A9CBF0;
+    border: 1px solid #294B72;
+}
+
+body.dark-mode .secondary-button {
+    color: white;
+}
+
+/* Bright Mode */
+
+body.light-mode .hero {
+    background:
+        radial-gradient(circle at 50% 0%, #DCE6F1 0%, transparent 60%),
+        linear-gradient(135deg, #FFFFFF, #EAF0F7);
+}
+
+body.light-mode .hero-badge {
+    background: #DCE6F1;
+    color: #193B63;
+    border: 1px solid #C3D4E7;
+}
+
+body.light-mode .secondary-button {
+    color: #193B63;
+}
+
+/* Phone layout */
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 450px;
+        padding: 65px 18px;
+    }
+
+    .hero h1 {
+        font-size: 37px;
+        letter-spacing: -1.2px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+    }
+}
+
+/* =================================
+   EDUCLUB - PROFESSIONAL CLUB SECTION
+================================= */
+
+/* Main section */
+
+.clubs-section {
+    padding: 85px 7%;
+    min-height: 500px;
+}
+
+/* Section heading */
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 38px;
+}
+
+.section-heading .tagline {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin: 0 0 12px;
+}
+
+.section-heading > p:last-child {
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Search bar */
+
+.search-container {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 5px 18px;
+    border-radius: 12px;
+    border: 1px solid #52769C;
+    transition: 0.25s ease;
+}
+
+.search-container:focus-within {
+    border-color: #528BCA;
+    box-shadow: 0 0 0 3px rgba(82, 139, 202, 0.15);
+}
+
+.search-container span {
+    font-size: 25px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 13px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+}
+
+/* Category filters */
+
+.category-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 11px;
+    margin: 0 auto 38px;
+}
+
+.filter-btn {
+    padding: 10px 19px;
+    border-radius: 50px;
+    border: 1px solid #52769C;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: #193B63;
+    color: #FFFFFF;
+    border-color: #193B63;
+}
+
+/* Club cards grid */
+
+#clubContainer {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* Individual cards */
+
+.club-card {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #29415E;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.club-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.club-image {
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+}
+
+.club-info {
+    padding: 22px;
+}
+
+.club-info h3 {
+    font-size: 19px;
+    margin: 0 0 10px;
+}
+
+.club-info p {
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 48px;
+}
+
+.club-fee {
+    font-size: 13px;
+    margin: 16px 0;
+}
+
+.club-link {
+    display: inline-block;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* No search results */
+
+.no-results {
+    text-align: center;
+    padding: 35px 15px;
+    font-size: 15px;
+}
+
+/* =================================
+   NIGHT MODE
+================================= */
+
+body.dark-mode .clubs-section {
+    background: #080D18;
+    color: #FFFFFF;
+}
+
+body.dark-mode .section-heading h2 {
+    color: #FFFFFF;
+}
+
+body.dark-mode .section-heading p {
+    color: #B9C7D8;
+}
+
+body.dark-mode .search-container {
+    background: #111B2B;
+    border-color: #29415E;
+}
+
+body.dark-mode .search-container span {
+    color: #8CB8E8;
+}
+
+body.dark-mode .search-container input {
+    color: #FFFFFF;
+}
+
+body.dark-mode .search-container input::placeholder {
+    color: #8A9BB0;
+}
+
+body.dark-mode .filter-btn {
+    background: #111B2B;
+    color: #DCE6F1;
+    border-color: #29415E;
+}
+
+body.dark-mode .filter-btn.active {
+    background: #193B63;
+    color: #FFFFFF;
+}
+
+body.dark-mode .club-card {
+    background: #111B2B;
+    border-color: #263B59;
+}
+
+body.dark-mode .club-image {
+    background: #172B49;
+}
+
+body.dark-mode .club-info h3 {
+    color: #FFFFFF;
+}
+
+body.dark-mode .club-info p {
+    color: #B9C7D8;
+}
+
+/* =================================
+   BRIGHT MODE
+================================= */
+
+body.light-mode .clubs-section {
+    background: #F4F7FB;
+    color: #102945;
+}
+
+body.light-mode .section-heading h2 {
+    color: #102945;
+}
+
+body.light-mode .section-heading p {
+    color: #526477;
+}
+
+body.light-mode .search-container {
+    background: #FFFFFF;
+    border-color: #D0DCE9;
+}
+
+body.light-mode .search-container input {
+    color: #102945;
+}
+
+body.light-mode .filter-btn {
+    background: #FFFFFF;
+    color: #193B63;
+    border-color: #D0DCE9;
+}
+
+body.light-mode .filter-btn.active {
+    background: #193B63;
+    color: #FFFFFF;
+}
+
+body.light-mode .club-card {
+    background: #FFFFFF;
+    border-color: #DCE6F1;
+}
+
+body.light-mode .club-image {
+    background: #EAF0F7;
+}
+
+body.light-mode .club-info h3 {
+    color: #102945;
+}
+
+body.light-mode .club-info p {
+    color: #526477;
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+    .clubs-section {
+        padding: 55px 16px;
+    }
+
+    .section-heading {
+        margin-bottom: 28px;
+    }
+
+    .category-filters {
+        gap: 8px;
+        margin-bottom: 28px;
+    }
+
+    .filter-btn {
+        padding: 9px 14px;
+        font-size: 12px;
+    }
+
+    #clubContainer {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .club-info {
+        padding: 19px;
+    }
+}
+
+/* ===== REAL CLUB THUMBNAILS ===== */
+
+.club-image {
+    width: 100%;
+    height: 185px;
+    overflow: hidden;
+    background: #172B49;
+}
+
+.club-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.club-card:hover .club-image img {
+    transform: scale(1.06);
+}
+
+/* ===== PROFESSIONAL CLUB CARD DETAILS ===== */
+
+.club-info {
+    padding: 20px;
+}
+
+.club-category {
+    display: inline-block;
+    padding: 6px 11px;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    background: rgba(59, 130, 246, 0.14);
+    color: #60a5fa;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.club-info h3 {
+    font-size: 20px;
+    margin-bottom: 9px;
+    font-weight: 700;
+}
+
+.club-info p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.club-card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.club-fee {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.club-link {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.club-link:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* ===== ED UCLUB LOGO ===== */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.logo-dot {
+    color: #3b82f6;
+}
+
+
+/* ===== ABOUT SECTION ===== */
+
+.about-section {
+    padding: 100px 8%;
+    background: #0d1729;
+    color: #f8fafc;
+}
+
+body.light-mode .about-section {
+    background: #f1f5f9;
+    color: #172033;
+}
+
+.about-content {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.about-text .tagline {
+    color: #60a5fa;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.about-text h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+    margin: 18px 0;
+}
+
+.about-text > p:not(.tagline) {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #aab8cc;
+    margin-bottom: 18px;
+}
+
+body.light-mode .about-text > p:not(.tagline) {
+    color: #526176;
+}
+
+.about-text .explore-button {
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.about-highlight {
+    padding: 38px;
+    border: 1px solid rgba(96, 165, 250, 0.25);
+    border-radius: 20px;
+    background: rgba(59, 130, 246, 0.10);
+}
+
+.about-icon {
+    font-size: 42px;
+    color: #60a5fa;
+    margin-bottom: 20px;
+}
+
+.about-highlight h3 {
+    font-size: 23px;
+    margin-bottom: 14px;
+}
+
+.about-highlight p {
+    color: #aab8cc;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+body.light-mode .about-highlight p {
+    color: #526176;
+}
+
+
+/* ===== FOOTER ===== */
+
+.site-footer {
+    background: #080f1d;
+    color: #f8fafc;
+    padding: 65px 8% 20px;
+}
+
+body.light-mode .site-footer {
+    background: #172033;
+    color: #f8fafc;
+}
+
+.footer-content {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 55px;
+    padding-bottom: 45px;
+}
+
+.footer-brand p {
+    max-width: 310px;
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 18px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-links h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.footer-links a:hover {
+    color: #60a5fa;
+    transform: translateX(3px);
+}
+
+.footer-bottom {
+    max-width: 1150px;
+    margin: auto;
+    padding-top: 22px;
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+
+/* ===== RESPONSIVE ABOUT AND FOOTER ===== */
+
+@media (max-width: 768px) {
+
+    .logo {
+        font-size: 21px;
+        gap: 7px;
+    }
+
+    .logo img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .about-section {
+        padding: 70px 7%;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-highlight {
+        padding: 28px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 420px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+}
+
+/* ===== HOW EDUCLUB WORKS ===== */
+
+.how-section {
+    padding: 85px 8%;
+    background: #101d32;
+    color: #f8fafc;
+}
+
+body.light-mode .how-section {
+    background: #eaf1fb;
+    color: #172033;
+}
+
+.steps-container {
+    max-width: 1150px;
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.step-card {
+    position: relative;
+    padding: 30px;
+    border-radius: 17px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+body.light-mode .step-card {
+    background: #ffffff;
+    border-color: #dbe4f0;
+}
+
+.step-card:hover {
+    transform: translateY(-7px);
+    border-color: #3b82f6;
+}
+
+.step-number {
+    color: #60a5fa;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.step-icon {
+    font-size: 32px;
+    margin: 25px 0 18px;
+}
+
+.step-card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.step-card p {
+    color: #aab8cc;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+body.light-mode .step-card p {
+    color: #526176;
+}
+
+@media (max-width: 768px) {
+    .how-section {
+        padding: 65px 7%;
+    }
+
+    .steps-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+
+/* EduClub Details Popup */
+.edu-details-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.edu-details-modal.show {
+    display: flex;
+}
+
+.edu-details-content {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #ffffff;
+    color: #222222;
+    border-radius: 18px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    animation: eduModalAppear 0.25s ease;
+}
+
+.edu-details-image {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    background: #eeeeee;
+}
+
+.edu-details-body {
+    padding: 25px;
+}
+
+.edu-details-category {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #e9efff;
+    color: #3157b7;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.edu-details-title {
+    margin: 15px 0 12px;
+    font-size: 25px;
+}
+
+.edu-details-description {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555555;
+}
+
+.edu-details-coordinator {
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.edu-details-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 20px;
+    border-radius: 8px;
+    background: #3157b7;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.edu-details-link:hover {
+    background: #244391;
+}
+
+.edu-details-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.edu-details-close:hover {
+    background: #000000;
+}
+
+@keyframes eduModalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .edu-details-content {
+        max-width: 100%;
+    }
+
+    .edu-details-image {
+        height: 190px;
+    }
+
+    .edu-details-body {
+        padding: 20px;
+    }
+
+    .edu-details-title {
+        font-size: 21px;
+    }
+}
+

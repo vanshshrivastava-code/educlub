@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduClub | Explore Your Campus</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="educlub-directory-data.js"></script>
+<script src="script.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+       
+<a href="#home" class="logo">
+    <img src="educlub-logo.jpeg" alt="EduClub Logo">
+    <span>EduClub<span class="logo-dot">.</span></span>
+</a>
+
+
+<button class="menu-toggle" id="menuToggle">
+    ☰
+</button>
+
+<nav id="navMenu">
+    <a href="#home">Home</a>
+    <a href="#clubs">Explore Clubs</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#about">About</a>
+</nav>
+
+<button id="themeToggle" class="theme-toggle">
+    ☀️ Bright Mode
+</button>
+    </header>
+
+    
+<!-- Welcome Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            ✦ YOUR CAMPUS. YOUR COMMUNITY.
+        </div>
+
+        <p class="tagline">DISCOVER. CONNECT. GROW.</p>
+
+        <h1>
+            Find your people.<br>
+            Follow your passion.
+        </h1>
+
+        <p class="hero-description">
+            One place to discover college clubs, explore your interests
+            and connect with communities that inspire you.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#clubs" class="explore-button">
+                Explore Clubs →
+            </a>
+
+            <a href="#about" class="secondary-button">
+                Learn More
+            </a>
+        </div>
+
+        <p class="hero-note">
+            Discover opportunities. Build connections. Make college count.
+        </p>
+
+    </div>
+</section>
+
+
+    <!-- Clubs Section -->
+    <main class="clubs-section" id="clubs">
+        <div class="section-heading">
+            <p class="tagline">YOUR CAMPUS, YOUR COMMUNITY</p>
+            <h2>Explore College Clubs</h2>
+            <p>Find a club that matches your interests.</p>
+        </div>
+
+        <div class="search-container">
+    <span>⌕</span>
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search clubs by name or interest..."
+    >
+</div>
+
+<div class="category-filters" id="categoryFilters">
+    <button class="filter-btn active" data-category="All">
+
+<button class="filter-btn section-btn active" data-section="clubs">
+    All Clubs (69)
+</button>
+
+<button class="filter-btn section-btn" data-section="societies">
+    Societies (15)
+</button>
+
+<button class="filter-btn" data-category="Technology">
+    Technical
+</button>
+
+<button class="filter-btn" data-category="Creative">
+    Creative
+</button>
+
+<button class="filter-btn" data-category="Music">
+    Music
+</button>
+
+<button class="filter-btn" data-category="Dance">
+    Dance
+</button>
+
+</div>
+
+        <div id="clubContainer" class="club-grid">
+            <!-- Club cards will appear here using JavaScript -->
+        </div>
+
+        <p id="noResults" class="no-results" hidden>
+            No clubs found. Try another search.
+        </p>
+    </main>
+
+<!-- How EduClub Works -->
+<section class="how-section" id="how-it-works">
+
+    <div class="section-heading">
+        <p class="tagline">SIMPLE. QUICK. EASY.</p>
+        <h2>How EduClub Works</h2>
+        <p>Discover your campus community in three simple steps.</p>
+    </div>
+
+    <div class="steps-container">
+
+        <div class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-icon">🔍</div>
+            <h3>Explore</h3>
+            <p>
+                Browse different college clubs and discover
+                communities that match your interests.
+            </p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-icon">✨</div>
+            <h3>Discover</h3>
+            <p>
+                Read club descriptions, check available
+                information and find what interests you.
+            </p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-icon">🚀</div>
+            <h3>Connect</h3>
+            <p>
+                Follow the club's provided link to learn
+                more about joining its community.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- About Section -->
+<section class="about-section" id="about">
+
+    <div class="about-content">
+
+        <div class="about-text">
+            <p class="tagline">ABOUT EDUCLUB</p>
+
+            <h2>
+                One campus.<br>
+                Endless possibilities.
+            </h2>
+
+            <p>
+                EduClub is a simple platform designed to bring
+                college clubs and societies together in one place.
+                It helps students explore different communities,
+                discover their interests and find opportunities
+                to participate in campus activities.
+            </p>
+
+            <p>
+                Whether you are interested in technology,
+                creativity, music or other activities,
+                EduClub makes discovering your campus community easier.
+            </p>
+
+            <a href="#clubs" class="explore-button">
+                Explore Communities →
+            </a>
+        </div>
+
+        <div class="about-highlight">
+            <div class="about-icon">✦</div>
+            <h3>Discover. Connect. Grow.</h3>
+            <p>
+                Find communities, explore interests
+                and make your college experience meaningful.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+<footer class="site-footer" id="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <a href="#home" class="logo">
+                <img src="educlub-logo.jpeg" alt="EduClub Logo">
+                <span>EduClub<span class="logo-dot">.</span></span>
+            </a>
+
+            <p>
+                Discover your campus community.
+                Find your interests and connect with people.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#clubs">Explore Clubs</a>
+            <a href="#about">About Us</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Explore</h3>
+            <a href="#clubs">Technical Clubs</a>
+            <a href="#clubs">Creative Clubs</a>
+            <a href="#clubs">Campus Communities</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 EduClub. All rights reserved.</p>
+        <p>Made for students, by students.</p>
+    </div>
+
+</footer>
+
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <h2>About EduClub</h2>
+        <p>
+            EduClub is a simple platform that brings college clubs
+            together in one place, making it easier for students
+            to discover communities and explore opportunities.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 EduClub. Made for students, by students.</p>
+    </footer>
+
+</body>
+</html>
